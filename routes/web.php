@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Conteollers\AuthManager;
+use App\Http\Controllers\AuthManager as ControllersAuthManager;
 
 Route::get('/', function () {
     return view('welcome');
@@ -71,9 +72,9 @@ Route::get('/layout', function () {
     return view('layout');
 });
 
-Route::get('/login.html', [AuthManager::class, 'login'])->name('login');
+Route::get('/login.html', [ControllersAuthManager::class, 'login'])->name('login');
 
-Route::post('/login.html', [AuthManager::class, 'loginPost'])->name('login.post');
+Route::post('/login.html', [ControllersAuthManager::class, 'loginPost'])->name('login.post');
 
 Route::get('/map', function () {
     return view('map');
@@ -87,9 +88,9 @@ Route::get('/progress-bar', function () {
     return view('progress-bar');
 });
 
-Route::get('/register.html',  [AuthManager::class, 'registration'])->name('register');
+Route::get('/register.html',  [ControllersAuthManager::class, 'registration'])->name('register');
 
-Route::post('/register.html', [AuthManager::class, 'registrationPost'])->name('register.post');
+Route::post('/register.html', [ControllersAuthManager::class, 'registrationPost'])->name('register.post');
 
 Route::get('/switch', function () {
     return view('switch');
@@ -107,3 +108,4 @@ Route::get('/typo', function () {
     return view('typo');
 });
 
+Route::get('/logout', [ControllersAuthManager::class,'logout'])->name(('logout'));

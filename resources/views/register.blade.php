@@ -47,7 +47,7 @@
                             </a>
                         </div>
                         <div class="login-form">
-                            <form action="{{route('registration.post')}}" method="post">
+                            <form action="{{route('register.post')}}" method="post">
                                 @csrf
                                 <div class="form-group">
                                     <label>Username</label>
@@ -63,7 +63,7 @@
                                 </div>
                                 <div class="login-checkbox">
                                     <label>
-                                        <input type="checkbox" name="aggree">Agree the terms and policy
+                                        <input type="checkbox" name="agree">Agree the terms and policy
                                     </label>
                                 </div>
                                 <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">register</button>
