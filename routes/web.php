@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Conteollers\AuthManager;
 
 Route::get('/', function () {
     return view('welcome');
@@ -60,7 +61,7 @@ Route::get('/inbox', function () {
 
 Route::get('/index3.html', function () {
     return view('index3');
-});
+})->name('home');
 
 Route::get('/index4', function () {
     return view('index4');
@@ -70,9 +71,9 @@ Route::get('/layout', function () {
     return view('layout');
 });
 
-Route::get('/login.html', function () {
-    return view('login');
-});
+Route::get('/login.html', [AuthManager::class, 'login'])->name('login');
+
+Route::post('/login.html', [AuthManager::class, 'loginPost'])->name('login.post');
 
 Route::get('/map', function () {
     return view('map');
@@ -86,13 +87,9 @@ Route::get('/progress-bar', function () {
     return view('progress-bar');
 });
 
-Route::get('/register.html', function () {
-    return view('register');
-});
+Route::get('/register.html',  [AuthManager::class, 'registration'])->name('register');
 
-Route::post('/register.html', function () {
-    return view('register');
-});
+Route::post('/register.html', [AuthManager::class, 'registrationPost'])->name('register.post');
 
 Route::get('/switch', function () {
     return view('switch');
