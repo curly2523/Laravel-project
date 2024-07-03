@@ -9,7 +9,7 @@ Route::get('/', function () {
 });
 
 Route::get('/card', function () {
-    return view('card');
+    return view('index3');
 });
 
 Route::get('/index.html', function () {
