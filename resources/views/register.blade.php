@@ -45,6 +45,24 @@
                             <a href="#">
                                 <img src="images/icon/logo.png" alt="CoolAdmin">
                             </a>
+                            <h2 style="margin-top: 30px;">Registration</h2>
+                        </div>
+                        <div class="mt-5">
+                            @if($errors->any())
+                                <div class="col-12">
+                                    @foreach($errors->all() as $error)
+                                        <div class="alert alert-danger">{{$error}}</div>
+                                    @endforeach
+                                </div>
+                            @endif
+
+                            @if(session()->has('error'))
+                                <div class="alert alert-danger">{{session('errors')}}</div>
+                            @endif
+
+                            @if(session()->has('success'))
+                                <div class="alert alert-success">{{session('errors')}}</div>
+                            @endif
                         </div>
                         <div class="login-form">
                             <form action="{{route('register.post')}}" method="post">
@@ -67,17 +85,17 @@
                                     </label>
                                 </div>
                                 <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">register</button>
-                                <div class="social-login-content">
+                                {{-- <div class="social-login-content">
                                     <div class="social-button">
                                         <button class="au-btn au-btn--block au-btn--blue m-b-20">register with facebook</button>
                                         <button class="au-btn au-btn--block au-btn--blue2">register with twitter</button>
                                     </div>
-                                </div>
+                                </div> --}}
                             </form>
                             <div class="register-link">
                                 <p>
                                     Already have account?
-                                    <a href="#">Sign In</a>
+                                    <a href="login.html">Sign In</a>
                                 </p>
                             </div>
                         </div>

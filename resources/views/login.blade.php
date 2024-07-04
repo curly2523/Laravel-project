@@ -45,6 +45,24 @@
                             <a href="#">
                                 <img src="images/icon/logo.png" alt="CoolAdmin">
                             </a>
+                            <h2 style="margin-top: 30px;">Login</h2>
+                        </div>
+                        <div class="mt-5">
+                            @if($errors->any())
+                                <div class="col-12">
+                                    @foreach($errors->all() as $error)
+                                        <div class="alert alert-danger">{{$error}}</div>
+                                    @endforeach
+                                </div>
+                            @endif
+
+                            @if(session()->has('error'))
+                                <div class="alert alert-danger">{{session('error')}}</div>
+                            @endif
+
+                            @if(session()->has('success'))
+                                <div class="alert alert-success">{{session('success')}}</div>
+                            @endif
                         </div>
                         <div class="login-form">
                             <form action="{{route('login.post')}}" method="post">
@@ -61,22 +79,22 @@
                                     <label>
                                         <input type="checkbox" name="remember">Remember Me
                                     </label>
-                                    <label>
+                                    {{-- <label>
                                         <a href="#">Forgotten Password?</a>
-                                    </label>
+                                    </label> --}}
                                 </div>
                                 <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
                                 <div class="social-login-content">
-                                    <div class="social-button">
+                                    {{-- <div class="social-button">
                                         <button class="au-btn au-btn--block au-btn--blue m-b-20">sign in with facebook</button>
                                         <button class="au-btn au-btn--block au-btn--blue2">sign in with twitter</button>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </form>
                             <div class="register-link">
                                 <p>
                                     Don't you have account?
-                                    <a href="#">Sign Up Here</a>
+                                    <a href="register.html">Sign Up Here</a>
                                 </p>
                             </div>
                         </div>

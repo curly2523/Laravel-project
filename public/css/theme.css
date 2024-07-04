@@ -465,6 +465,11 @@ section {
     background: #3868cd;
 }
 
+.au-btn--pink {
+    background-color: #e6638c; 
+    color: white; 
+}
+
 .au-btn--blue2 {
     background: #00aced;
 }

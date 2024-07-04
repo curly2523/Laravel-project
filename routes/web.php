@@ -3,13 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Conteollers\AuthManager;
 use App\Http\Controllers\AuthManager as ControllersAuthManager;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('index2');
+})->name(('welcome'));
 
 Route::get('/card', function () {
-    return view('index3');
+    return view('index2');
 });
 
 Route::get('/index.html', function () {
@@ -17,8 +18,8 @@ Route::get('/index.html', function () {
 });
 
 Route::get('/index2.html', function () {
-    return view('index2');
-});
+  return view('index2');
+ });
 
 Route::get('/alert', function () {
     return view('alert');
@@ -64,7 +65,7 @@ Route::get('/index3.html', function () {
     return view('index3');
 })->name('home');
 
-Route::get('/index4', function () {
+Route::get('/index4.html', function () {
     return view('index4');
 });
 
@@ -108,4 +109,4 @@ Route::get('/typo', function () {
     return view('typo');
 });
 
-Route::get('/logout', [ControllersAuthManager::class,'logout'])->name(('logout'));
+Route::post('/logout', [ControllersAuthManager::class,'logout'])->name(('logout'));

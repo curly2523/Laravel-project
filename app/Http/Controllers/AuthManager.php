@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+
 
 class AuthManager extends Controller
 {
@@ -55,6 +56,6 @@ class AuthManager extends Controller
     function logout(){
         Session::flush();
         Auth::logout();
-        return redirect(route('login'));
+        return redirect(route('welcome'));
     }
 }
