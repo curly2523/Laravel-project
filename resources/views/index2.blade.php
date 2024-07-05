@@ -39,56 +39,13 @@
 <body class="animsition">
     <div class="page-wrapper">
         <!-- MENU SIDEBAR-->
-        <aside class="menu-sidebar2">
+        {{-- <aside class="menu-sidebar2" style="overflow: hidden">
             <div class="logo">
                 <a href="#">
                     <img src="images/icon/logo-white.png" alt="Cool Admin" />
                 </a>
             </div>
-            <div class="menu-sidebar2__content js-scrollbar1">
-                
-                <nav class="navbar-sidebar2">
-                    <ul class="list-unstyled navbar__list">
-                        <li class="active has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="inbox.html">
-                                <i class="fas fa-chart-bar"></i>About</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-shopping-basket"></i>Contact Us</a>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>Pages
-                                <span class="arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </span>
-                            </a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="login.html">
-                                        <i class="fas fa-sign-in-alt"></i>Login</a>
-                                </li>
-                                <li>
-                                    <a href="register.html">
-                                        <i class="fas fa-user"></i>Register</a>
-                                </li>
-                                <li>
-                                    <a href="forget-pass.html">
-                                        <i class="fas fa-unlock-alt"></i>Forget Password</a>
-                                </li>
-                            </ul>
-                        </li>
-                        
-                    </ul>
-                </nav>
-            </div>
-        </aside>
+        </aside> --}}
         <!-- END MENU SIDEBAR-->
 
         <!-- PAGE CONTAINER-->
@@ -97,13 +54,52 @@
             <header class="header-desktop2">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
-                        <div class="header-wrap2">
-                            <div class="logo d-block d-lg-none">
+                        <div class="header-wrap2 d-flex justify-content-between align-items-center">
+                            <div class="logo d-block" style="align-self: flex-start">
                                 <a href="#">
                                     <img src="images/icon/logo-white.png" alt="CoolAdmin" />
                                 </a>
                             </div>
+                            
+                             <!-- Integrated Sidebar Items in Header -->
+                <nav class="navbar-header d-none d-lg-flex align-items-center">
+                    <ul class="list-unstyled navbar__list d-flex align-items-center">
+                        <li class="nav-item" style="margin-right: 20px;">
+                            <a class="nav-link" href="#" style="color: aliceblue">
+                                <i class="fas fa-tachometer-alt" style="color: aliceblue"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="inbox.html" style="color: aliceblue">
+                                <i class="fas fa-chart-bar" style="color: aliceblue"></i> About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: aliceblue">
+                                <i class="fas fa-shopping-basket" style="color: aliceblue"></i> Contact Us
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: aliceblue">
+                                <i class="fas fa-copy" style="color: aliceblue"></i> Pages
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                <a class="dropdown-item" href="login.html">
+                                    <i class="fas fa-sign-in-alt"></i> Login
+                                </a>
+                                <a class="dropdown-item" href="register.html">
+                                    <i class="fas fa-user"></i> Register
+                                </a>
+                                <a class="dropdown-item" href="forget-pass.html">
+                                    <i class="fas fa-unlock-alt"></i> Forget Password
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Integrated Sidebar Items in Header -->
                             <div class="header-button2">
+
                                 <div class="header-button-item js-item-menu">
                                     
                                     <i class="zmdi zmdi-search"></i>
@@ -145,14 +141,14 @@
 
 
            <!-- BREADCRUMB-->
-<section class="au-breadcrumb m-t-75">
+<section class="au-breadcrumb " >
     <div class="section__content section__content--p30">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="au-breadcrumb-content">
                         <div class="au-breadcrumb-left">
-                            <span class="au-breadcrumb-span">You are here:</span>
+                            <span class="au-breadcrumb-span" >You are here:</span>
                             <ul class="list-unstyled list-inline au-breadcrumb__list">
                                 <li class="list-inline-item active",>
                                     <a href="#">Home</a>
@@ -177,15 +173,15 @@
 
 
   <!-- MAIN CONTENT-->
-  <main class="main-content">
+  <main class="main-content" >
     <section class="hero">
-        <div class="container" style="margin-top: 10px">
+        <div class="container">
             <h1>Welcome to Our Website</h1>
             <h3>"Connecting You to Tomorrow's Technology Today"</h3>
             <p>
                 Explanation: This tagline highlights the company's focus on advanced mobile technology and exceptional customer service, positioning them as a leading provider in the industry committed to delivering both innovation and customer satisfaction.</p>
             <a href="#">
-                <img src="images/icon/phpnes.jpg" alt="phones" style="width: 900px; height: 400;"/>
+                <img src="images/icon/phpnes.jpg" alt="phones" style="width: 500px; height: 300;"/>
             </a><br>
             <a href="about.html" class="btn btn-lg btn-success">Learn More</a>
         </div>

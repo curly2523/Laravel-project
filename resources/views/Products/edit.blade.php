@@ -13,13 +13,13 @@
     <title>Update Product</title>
 
     <!-- Fontfaces CSS-->
-    <link href="css/font-face.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
-    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href={{asset("css/font-face.css")}} rel="stylesheet" media="all">
+    <link href={{asset("vendor/font-awesome-4.7/css/font-awesome.min.css")}} rel="stylesheet" media="all">
+    <link href={{asset("vendor/font-awesome-5/css/fontawesome-all.min.css")}} rel="stylesheet" media="all">
+    <link href={{asset("vendor/mdi-font/css/material-design-iconic-font.min.css")}} rel="stylesheet" media="all">
 
     <!-- Bootstrap CSS-->
-    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href={{asset("vendor/bootstrap-4.1/bootstrap.min.css")}} rel="stylesheet" media="all">
 
     <!-- Vendor CSS-->
     <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
@@ -31,7 +31,7 @@
     <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
-    <link href="css/theme.css" rel="stylesheet" media="all">
+    <link href={{ asset('css/theme.css') }} rel="stylesheet" media="all">
 
 </head>
 <body class="animsition">
@@ -42,7 +42,7 @@
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <img src="images/icon/logo.png" alt="CoolAdmin">
+                                <img src={{asset("images/icon/logo.png")}} alt="CoolAdmin">
                             </a>
                             <h2 style="margin-top: 30px;">Update Product</h2>
                         </div>
@@ -78,7 +78,6 @@
                                     <input class="au-input au-input--full" type="integer" name="reorder_Level" placeholder="Enter Reorder Level" value="{{$product->reorder_Level}}">
                                 </div>
                                 <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Update</button>
-                                <div class="social-login-content">
                                 </div>
                             </form>
                         </div>

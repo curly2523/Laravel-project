@@ -646,7 +646,7 @@
                                         </div>
                                     @endif
                                 </div>
-                                <table class="table table-data2" >
+                                <table class="table table-data2" style="width: 500%">
                                     <thead>
                                         <tr>
                                             <th>Name</th>
@@ -658,7 +658,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="tr-shadow" style="width: 20px">
+                                        <tr class="tr-shadow" style="width: 500%">
                                             @foreach($products as $product)
 
                                             
