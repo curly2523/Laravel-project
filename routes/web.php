@@ -61,13 +61,7 @@ Route::get('/inbox', function () {
     return view('inbox');
 });
 
-Route::get('/index3.html', function () {
-    return view('index3');
-})->name('home');
-
-Route::get('/index4.html', function () {
-    return view('index4');
-});
+Route::get('/index3.html', [ProductController::class, 'index'] )->name('index3');
 
 Route::get('/layout', function () {
     return view('layout');
@@ -110,3 +104,17 @@ Route::get('/typo', function () {
 });
 
 Route::post('/logout', [ControllersAuthManager::class,'logout'])->name(('logout'));
+
+Route::get('/index4.html',  function () {
+    return view('index4');
+});
+
+Route::get('/product/create', [ProductController::class, 'create'])->name('products.create');
+
+Route::get('/product/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
+
+Route::put('/product/{product}/update', [ProductController::class, 'update'])->name('products.update');
+
+Route::delete('/product/{product}/delete', [ProductController::class, 'delete'])->name('products.delete');
+
+Route::post('/index3.html', [ProductController::class, 'store'])->name('products.store');

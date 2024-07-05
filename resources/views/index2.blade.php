@@ -179,11 +179,14 @@
   <!-- MAIN CONTENT-->
   <main class="main-content">
     <section class="hero">
-        <div class="container">
+        <div class="container" style="margin-top: 10px">
             <h1>Welcome to Our Website</h1>
             <h3>"Connecting You to Tomorrow's Technology Today"</h3>
             <p>
                 Explanation: This tagline highlights the company's focus on advanced mobile technology and exceptional customer service, positioning them as a leading provider in the industry committed to delivering both innovation and customer satisfaction.</p>
+            <a href="#">
+                <img src="images/icon/phpnes.jpg" alt="phones" style="width: 900px; height: 400;"/>
+            </a><br>
             <a href="about.html" class="btn btn-lg btn-success">Learn More</a>
         </div>
     </section>

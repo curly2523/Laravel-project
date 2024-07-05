@@ -11,8 +11,8 @@ class Product extends Model
 
     protected $fillable=[
         'name',
-        'unit cost',
+        'cost',
         'quantity',
-        'reorder level'
+        'reorder_Level'
     ];
 }
