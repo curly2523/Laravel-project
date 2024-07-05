@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard 3</title>
+    <title>Home</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -55,17 +55,17 @@
                                 </a>
                                 <ul class="header3-sub-list list-unstyled">
                                     <li>
-                                        <a href="index.html">Dashboard 1</a>
+                                        <a href="/welcome">Welcome</a>
                                     </li>
                                     <li>
-                                        <a href="index2.html">Dashboard 2</a>
+                                        <a href="/home">Home</a>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <a href="index3.html">Dashboard 3</a>
                                     </li>
                                     <li>
                                         <a href="index4.html">Dashboard 4</a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </li>
                             <li>

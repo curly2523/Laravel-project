@@ -17,7 +17,7 @@ Route::get('/index.html', function () {
     return view('index');
 });
 
-Route::get('/index2.html', function () {
+Route::get('/welcome', function () {
   return view('index2');
  });
 
@@ -61,7 +61,7 @@ Route::get('/inbox', function () {
     return view('inbox');
 });
 
-Route::get('/index3.html', [ProductController::class, 'index'] )->name('index3');
+Route::get('/home', [ProductController::class, 'index'] )->name('index3');
 
 Route::get('/layout', function () {
     return view('layout');
