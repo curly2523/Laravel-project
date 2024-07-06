@@ -55,7 +55,7 @@
                                 </a>
                                 <ul class="header3-sub-list list-unstyled">
                                     <li>
-                                        <a href="/welcome">Welcome</a>
+                                        <a href="/">Welcome</a>
                                     </li>
                                     <li>
                                         <a href="/home">Home</a>
@@ -84,10 +84,10 @@
                                     <span class="bot-line"></span>Pages</a>
                                 <ul class="header3-sub-list list-unstyled">
                                     <li>
-                                        <a href="login.html">Login</a>
+                                        <a href="login">Login</a>
                                     </li>
                                     <li>
-                                        <a href="register.html">Register</a>
+                                        <a href="register">Register</a>
                                     </li>
                                     <li>
                                         <a href="forget-pass.html">Forget Password</a>
@@ -526,7 +526,8 @@
                                     </ul>
                                 </div>
                                 <form class="au-form-icon--sm" action="" method="post">
-                                    <input class="au-input--w300 au-input--style2" type="text" placeholder="Search for datas &amp; reports...">
+                                    @csrf
+                                    <input class="au-input--w300 au-input--style2" type="text" placeholder="Search for datas">
                                     <button class="au-btn--submit2" type="submit">
                                         <i class="zmdi zmdi-search"></i>
                                     </button>
@@ -650,6 +651,7 @@
                                     <thead>
                                         <tr>
                                             <th>Name</th>
+                                            <th>Storage</th>
                                             <th>Unit Cost</th>
                                             <th>Quantity</th>
                                             <th>reorder Level</th>
@@ -663,6 +665,7 @@
 
                                             
                                             <td>{{$product->name}}</td>
+                                            <td>{{$product->storage}}GB</td>
                                             <td>{{$product->cost}}</td>
                                             <td>{{$product->quantity}}</td>
                                             <td>{{$product->reorder_Level}}</td>

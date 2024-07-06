@@ -1,13 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Conteollers\AuthManager;
 use App\Http\Controllers\AuthManager as ControllersAuthManager;
 use App\Http\Controllers\ProductController;
-
-Route::get('/', function () {
-    return view('index2');
-})->name(('welcome'));
 
 Route::get('/card', function () {
     return view('index2');
@@ -16,10 +11,6 @@ Route::get('/card', function () {
 Route::get('/index.html', function () {
     return view('index');
 });
-
-Route::get('/welcome', function () {
-  return view('index2');
- });
 
 Route::get('/alert', function () {
     return view('alert');
@@ -61,15 +52,9 @@ Route::get('/inbox', function () {
     return view('inbox');
 });
 
-Route::get('/home', [ProductController::class, 'index'] )->name('index3');
-
 Route::get('/layout', function () {
     return view('layout');
 });
-
-Route::get('/login.html', [ControllersAuthManager::class, 'login'])->name('login');
-
-Route::post('/login.html', [ControllersAuthManager::class, 'loginPost'])->name('login.post');
 
 Route::get('/map', function () {
     return view('map');
@@ -82,10 +67,6 @@ Route::get('/modal', function () {
 Route::get('/progress-bar', function () {
     return view('progress-bar');
 });
-
-Route::get('/register.html',  [ControllersAuthManager::class, 'registration'])->name('register');
-
-Route::post('/register.html', [ControllersAuthManager::class, 'registrationPost'])->name('register.post');
 
 Route::get('/switch', function () {
     return view('switch');
@@ -103,12 +84,31 @@ Route::get('/typo', function () {
     return view('typo');
 });
 
-Route::post('/logout', [ControllersAuthManager::class,'logout'])->name(('logout'));
-
 Route::get('/index4.html',  function () {
     return view('index4');
 });
 
+//dashboards
+
+Route::get('/', function () {
+    return view('welcome');
+})->name(('welcome'));
+
+Route::get('/home', [ProductController::class, 'index'] )->name('home');
+
+//reg,log routes
+
+Route::get('/register',  [ControllersAuthManager::class, 'registration'])->name('register');
+
+Route::post('/register', [ControllersAuthManager::class, 'registrationPost'])->name('register.post');
+
+Route::post('/logout', [ControllersAuthManager::class,'logout'])->name(('logout'));
+
+Route::get('/login', [ControllersAuthManager::class, 'login'])->name('login');
+
+Route::post('/login', [ControllersAuthManager::class, 'loginPost'])->name('login.post');
+
+// Product routes
 Route::get('/product/create', [ProductController::class, 'create'])->name('products.create');
 
 Route::get('/product/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
@@ -117,4 +117,4 @@ Route::put('/product/{product}/update', [ProductController::class, 'update'])->n
 
 Route::delete('/product/{product}/delete', [ProductController::class, 'delete'])->name('products.delete');
 
-Route::post('/index3.html', [ProductController::class, 'store'])->name('products.store');
+Route::post('/home', [ProductController::class, 'store'])->name('products.store');

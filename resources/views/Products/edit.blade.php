@@ -66,6 +66,10 @@
                                     <input class="au-input au-input--full" type="txt" name="name" placeholder="Enter Product Name" value="{{$product->name}}">
                                 </div>
                                 <div class="form-group">
+                                    <label>Storage(GB)</label>
+                                    <input class="au-input au-input--full" type="txt" name="storage" placeholder="Enter Storage Capacity" value="{{$product->storage}}">
+                                </div>
+                                <div class="form-group">
                                     <label>Unit Cost</label>
                                     <input class="au-input au-input--full" type="integer" name="cost" placeholder="Enter Unit cost" value="{{$product->cost}}">
                                 </div>
