@@ -8,7 +8,7 @@ Route::get('/card', function () {
     return view('index2');
 });
 
-Route::get('/index.html', function () {
+Route::get('/index', function () {
     return view('index');
 });
 
@@ -84,7 +84,7 @@ Route::get('/typo', function () {
     return view('typo');
 });
 
-Route::get('/index4.html',  function () {
+Route::get('/index4',  function () {
     return view('index4');
 });
 
@@ -94,7 +94,11 @@ Route::get('/', function () {
     return view('welcome');
 })->name(('welcome'));
 
-Route::get('/home', [ProductController::class, 'index'] )->name('home');
+Route::get('/home',function () {
+    return view('home');
+} )->name('home');
+
+Route::get('/inventory', [ProductController::class, 'index'] )->name('inventory');
 
 //reg,log routes
 
@@ -117,4 +121,4 @@ Route::put('/product/{product}/update', [ProductController::class, 'update'])->n
 
 Route::delete('/product/{product}/delete', [ProductController::class, 'delete'])->name('products.delete');
 
-Route::post('/home', [ProductController::class, 'store'])->name('products.store');
+Route::post('/inventory', [ProductController::class, 'store'])->name('products.store');

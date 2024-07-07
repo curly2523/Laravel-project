@@ -10,7 +10,7 @@ class ProductController extends Controller
 {
     public function index(){
         $products =Product::all();
-        return view('home',['products'=>$products]);
+        return view('inventory',['products'=>$products]);
     }
 
     public function create(){
@@ -29,7 +29,7 @@ class ProductController extends Controller
 
         $newProduct = Product::create($data);
 
-        return redirect(route('home'));
+        return redirect(route('inventory'));
 
     }
 
@@ -50,13 +50,13 @@ class ProductController extends Controller
 
         $product->update($data);
 
-        return redirect(route('home'))->with('success','Product Updated Successfully.');
+        return redirect(route('inventory'))->with('success','Product Updated Successfully.');
 
     }
 
     public function delete(Product $product){
         $product->delete();
-        return redirect(route('home'))->with('success','Product Deleted Successfully.');
+        return redirect(route('inventory'))->with('success','Product Deleted Successfully.');
 
      }
 
