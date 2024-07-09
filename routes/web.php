@@ -96,9 +96,11 @@ Route::get('/', function () {
 
 Route::get('/home',function () {
     return view('home');
-} )->name('home');
+} )->name('home')->middleware('auth');
 
 Route::get('/inventory', [ProductController::class, 'index'] )->name('inventory');
+
+Route::get('/search', [ProductController::class, 'search'] )->name('search');
 
 //reg,log routes
 

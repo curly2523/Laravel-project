@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="au theme template">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">
 
@@ -525,13 +526,10 @@
                                         <li class="list-inline-item">Dashboard</li>
                                     </ul>
                                 </div>
-                                <form class="au-form-icon--sm" action="" method="post">
-                                    @csrf
-                                    <input class="au-input--w300 au-input--style2" type="text" placeholder="Search for datas">
-                                    <button class="au-btn--submit2" type="submit">
-                                        <i class="zmdi zmdi-search"></i>
-                                    </button>
-                                </form>
+                                    <input class="au-input--w300 au-input--style2" type="text" name="search" id="search" placeholder="Search for datas">
+                                    {{-- <button class="au-btn--submit2" type="submit"> --}}
+                                        {{-- <i class="zmdi zmdi-search"></i> --}}
+                                    {{-- </button> --}}
                             </div>
                         </div>
                     </div>
@@ -540,10 +538,10 @@
             <!-- END BREADCRUMB-->
 
             <!-- DATA TABLE-->
-            <section class="p-t-20">
+            <section class="p-t-5">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-20">
                             <h3 class="title-5 m-b-35">data table</h3>
                             <div class="table-data__tool">
                                 <div class="table-data__tool-left">
@@ -600,7 +598,7 @@
                                             <th></th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="Content">
                                         <tr class="tr-shadow" style="width: 500%">
                                             @foreach($products as $product)
 
@@ -677,6 +675,28 @@
 
     <!-- Main JS-->
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+     $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+        $(document).ready(function() {
+            $('#search').on('keyup', function() {
+                var value = $(this).val();
+    
+                $.ajax({
+                    type: 'get',
+                    url: '{{ route("search") }}',
+                    data: {'search': value},
+                    success: function(data) {
+                        console.log(data);
+                        $('#Content').html(data);
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 
