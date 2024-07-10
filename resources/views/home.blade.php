@@ -97,7 +97,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="has-sub">
+                            {{-- <li class="has-sub">
                                 <a href="#">
                                     <i class="fas fa-desktop"></i>
                                     <span class="bot-line"></span>UI Elements</a>
@@ -136,7 +136,7 @@
                                         <a href="typo.html">Typography</a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                     <div class="header__tool">

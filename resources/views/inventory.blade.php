@@ -339,7 +339,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="has-sub">
+                        {{-- <li class="has-sub">
                             <a class="js-arrow" href="#">
                                 <i class="fas fa-desktop"></i>UI Elements</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
@@ -377,7 +377,7 @@
                                     <a href="typo.html">Typography</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </nav>
@@ -540,12 +540,12 @@
             <!-- DATA TABLE-->
             <section class="p-t-5">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-20">
+                    {{-- <div class="row"> --}}
+                        {{-- <div class="col-md-30"> --}}
                             <h3 class="title-5 m-b-35">data table</h3>
-                            <div class="table-data__tool">
-                                <div class="table-data__tool-left">
-                                    <div class="rs-select2--light rs-select2--md">
+                            {{-- <div class="table-data__tool"> --}}
+                                 {{-- <div class="table-data__tool-left"> 
+                                    {{-- <div class="rs-select2--light rs-select2--md">
                                         <select class="js-select2" name="property">
                                             <option selected="selected">All Properties</option>
                                             <option value="">Option 1</option>
@@ -562,23 +562,23 @@
                                         <div class="dropDownSelect2"></div>
                                     </div>
                                     <button class="au-btn-filter">
-                                        <i class="zmdi zmdi-filter-list"></i>filters</button>
-                                </div>
-                                <div class="table-data__tool-right">
+                                        <i class="zmdi zmdi-filter-list"></i>filters</button> 
+                              </div>  --}}
+                                {{-- <div style="padding-left: 1100px"> --}}
                                     <a href="{{route('products.create')}}">
-                                    <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                                    <button class="au-btn au-btn-icon au-btn--green au-btn--small" style="margin-left: 1100px">
                                         <i class="zmdi zmdi-plus"></i>add item</button>
-                                    <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
+                                    {{-- <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                                         <select class="js-select2" name="type">
                                             <option selected="selected">Export</option>
                                             <option value="">Option 1</option>
                                             <option value="">Option 2</option>
                                         </select>
                                         <div class="dropDownSelect2"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="table-responsive table-responsive-data2">
+                                    </div> --}}
+                                {{-- </div> --}}
+                            {{-- </div> --}}
+                            <div class="table-responsive table-responsive-data2" style="padding-right: 20px">
                                 <div>
                                     @if(session()->has('success'))
                                         <div>
@@ -629,8 +629,8 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
-                    </div>
+                        {{-- </div> --}}
+                    {{-- </div> --}}
                 </div>
             </section>
             <!-- END DATA TABLE-->

@@ -83,7 +83,7 @@ p {
 }
 
 .table-responsive {
-    padding-right: 1px;
+    padding-right: 5px;
 }
 
 .card {
@@ -4584,7 +4584,7 @@ section {
 }
 
 .table-data2.table thead th {
-    font-size: 12px;
+    font-size: 16px;
     color: #555;
     text-transform: uppercase;
     border: none;
@@ -4675,7 +4675,7 @@ section {
 }
 
 .table-data__tool .table-data__tool-left > div {
-    margin-right: 12px;
+    margin-right: 20px;
 }
 
 .table-data__tool .table-data__tool-right > button {
@@ -4719,7 +4719,7 @@ section {
 .table-data-feature .item {
     display: block;
     height: 30px;
-    width:30px;
+    width: 30px;
     position: relative;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
