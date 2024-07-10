@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthManager as ControllersAuthManager;
+use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\ProductController;
 
 Route::get('/card', function () {
@@ -124,3 +125,6 @@ Route::put('/product/{product}/update', [ProductController::class, 'update'])->n
 Route::delete('/product/{product}/delete', [ProductController::class, 'delete'])->name('products.delete');
 
 Route::post('/inventory', [ProductController::class, 'store'])->name('products.store');
+
+// // Category routes
+// Route::get('/categories', [ProductCategoryController::class, 'index'])->name('categories.index');

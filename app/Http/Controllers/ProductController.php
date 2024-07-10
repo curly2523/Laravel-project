@@ -6,15 +6,18 @@ use Illuminate\Http\Request;
 
 use App\Models\Product;
 
+use App\Models\ProductCategory;
+
 class ProductController extends Controller
 {
     public function index(){
-        $products =Product::all();
+        $products =Product::with('category')->get();
         return view('inventory',['products'=>$products]);
     }
 
     public function create(){
-        return view('products.create');
+        $categories = ProductCategory::all();
+        return view('products.create', ['categories' => $categories]);
     }
 
     public function store(Request $request){
@@ -22,6 +25,7 @@ class ProductController extends Controller
         $data = $request->validate([
             'name' => 'required',
             'storage' => 'required',
+            'category_id' => 'required|exists:product_categories,id',
             'cost' => 'required|decimal:2',
             'quantity' => 'required |numeric',
             'reorder_Level' => 'required| numeric',
@@ -34,7 +38,9 @@ class ProductController extends Controller
     }
 
     public function edit(Product $product){
-       return view('products.edit',['product'=> $product]); 
+
+        $categories = ProductCategory::all();
+       return view('products.edit',['product'=> $product, 'categories' => $categories]); 
         
     }
 
@@ -43,6 +49,7 @@ class ProductController extends Controller
         $data = $request->validate([
             'name' => 'required',
             'storage' => 'required',
+            'category_id' => 'required|exists:product_categories,id',
             'cost' => 'required|decimal:2',
             'quantity' => 'required |numeric',
             'reorder_Level' => 'required| numeric',
@@ -72,6 +79,7 @@ class ProductController extends Controller
             '<tr>
                 <td>' . $product->name . '</td>
                 <td>' . $product->storage . 'GB</td>
+                 <td>' . $product->category->name . '</td>
                 <td>' . $product->cost . '</td>
                 <td>' . $product->quantity . '</td>
                 <td>' . $product->reorder_Level . '</td>

@@ -35,10 +35,10 @@
 
 </head>
 <body class="animsition">
-    <div class="page-wrapper">
-        <div class="page-content--bge5">
-            <div class="container">
-                <div class="login-wrap">
+    <div class="page-wrapper" style="overflow: auto">
+        <div class="page-content--bge5" style="overflow: auto">
+            <div class="container" style="overflow: auto">
+                <div class="login-wrap" style="overflow: auto">
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
@@ -68,6 +68,17 @@
                                 <div class="form-group">
                                     <label>Storage(GB)</label>
                                     <input class="au-input au-input--full" type="txt" name="storage" placeholder="Enter Storage Capacity" value="{{$product->storage}}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="category_id">Category</label>
+                                    <select class="au-input au-input--full" style="height: 40px" name="category_id" id="category_id" class="form-control" required>
+                                        <option value="">Select Category</option>
+                                        @foreach($categories as $category)
+                                            <option value="{{ $category->id }}" {{ $product->category_id == $category->id ? 'selected' : '' }}>
+                                                {{ $category->category_name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Unit Cost</label>
