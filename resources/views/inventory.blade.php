@@ -95,7 +95,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="has-sub">
+                            {{-- <li class="has-sub">
                                 <a href="#">
                                     <i class="fas fa-desktop"></i>
                                     <span class="bot-line"></span>UI Elements</a>
@@ -134,7 +134,7 @@
                                         <a href="typo.html">Typography</a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                     <div class="header__tool">
@@ -580,11 +580,16 @@
                             {{-- </div> --}}
                             <div class="table-responsive table-responsive-data2" style="padding-right: 20px">
                                 <div>
-                                    @if(session()->has('success'))
+                                    {{-- @if(session()->has('success'))
                                         <div>
                                             {{session('success')}}
                                         </div>
-                                    @endif
+                                    @endif --}}
+                                    @if(session('success'))
+                                    <script >
+                                        alert("{{ session('success') }}");
+                                    </script>
+                                @endif
                                 </div>
                                 <table class="table table-data2" style="width: 500%">
                                     <thead>

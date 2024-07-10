@@ -29,7 +29,7 @@ class ProductController extends Controller
 
         $newProduct = Product::create($data);
 
-        return redirect(route('inventory'));
+        return redirect(route('inventory'))->with('success', 'Product Created Successfully.');
 
     }
 
