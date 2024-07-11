@@ -127,4 +127,14 @@ Route::delete('/product/{product}/delete', [ProductController::class, 'delete'])
 Route::post('/inventory', [ProductController::class, 'store'])->name('products.store');
 
 // // Category routes
-// Route::get('/categories', [ProductCategoryController::class, 'index'])->name('categories.index');
+Route::get('/categories', [ProductCategoryController::class,'index'])->name('categories.index');
+
+Route::get('/categories/create', [ProductCategoryController::class, 'create'])->name('categories.create');
+
+Route::get('/categories/{productCategory}/edit', [ProductCategoryController::class, 'edit'])->name('categories.edit');
+
+Route::put('/categories/{productCategory}/update', [ProductCategoryController::class, 'update'])->name('categories.update');
+
+Route::delete('/categories/{productCategory}/delete', [ProductCategoryController::class, 'destroy'])->name('categories.destroy');
+
+Route::post('/categories', [ProductCategoryController::class, 'store'])->name('categories.store');

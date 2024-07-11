@@ -13,7 +13,7 @@ class ProductCategoryController extends Controller
     public function index()
     {
         $categories = ProductCategory::all();
-        return view('product_categories.index', compact('categories'));
+        return view('categories.index', compact('categories'));
     }
 
     /**
@@ -21,7 +21,7 @@ class ProductCategoryController extends Controller
      */
     public function create()
     {
-        return view('product_categories.create');
+        return view('categories.create');
     }
 
     /**
@@ -30,12 +30,12 @@ class ProductCategoryController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'name' => 'required'
+            'category_name' => 'required'
         ]);
 
         ProductCategory::create($data);
 
-        return redirect(route('product_categories.index'))->with('success', 'Category Created Successfully.');
+        return redirect(route('categories.index'))->with('success', 'Category Created Successfully.');
     }
 
     /**
@@ -51,7 +51,7 @@ class ProductCategoryController extends Controller
      */
     public function edit(ProductCategory $productCategory)
     {
-        return view('product_categories.edit', compact('productCategory'));
+        return view('categories.edit', compact('productCategory'));
     }
     
 
@@ -61,12 +61,12 @@ class ProductCategoryController extends Controller
     public function update(Request $request,  ProductCategory $productCategory)
     {
         $data = $request->validate([
-            'name' => 'required'
+            'category_name' => 'required'
         ]);
 
         $productCategory->update($data);
 
-        return redirect(route('product_categories.index'))->with('success', 'Category Updated Successfully.');
+        return redirect(route('categories.index'))->with('success', 'Category Updated Successfully.');
     }
     
 
@@ -77,6 +77,6 @@ class ProductCategoryController extends Controller
     {
         $productCategory->delete();
 
-        return redirect(route('product_categories.index'))->with('success', 'Category Deleted Successfully.');
+        return redirect(route('categories.index'))->with('success', 'Category Deleted Successfully.');
     }
 }

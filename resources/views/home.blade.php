@@ -95,6 +95,9 @@
                                     <li>
                                         <a href="inventory">Inventory</a>
                                     </li>
+                                    <li>
+                                        <a href="categories">Categories</a>
+                                    </li>
                                 </ul>
                             </li>
                             {{-- <li class="has-sub">

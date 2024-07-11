@@ -11,7 +11,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Inventory</title>
+    <title>Categories</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -91,10 +91,7 @@
                                         <a href="register">Register</a>
                                     </li>
                                     <li>
-                                        <a href="forget-pass">Forget Password</a>
-                                    </li>
-                                    <li>
-                                        <a href="categories">Categories</a>
+                                        <a href="forget-pass.html">Forget Password</a>
                                     </li>
                                 </ul>
                             </li>
@@ -286,7 +283,189 @@
                     </div>
                 </div>
             </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="index.html">Dashboard 1</a>
+                                </li>
+                                <li>
+                                    <a href="index2.html">Dashboard 2</a>
+                                </li>
+                                <li>
+                                    <a href="index3.html">Dashboard 3</a>
+                                </li>
+                                <li>
+                                    <a href="index4.html">Dashboard 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="chart.html">
+                                <i class="fas fa-chart-bar"></i>Charts</a>
+                        </li>
+                        <li>
+                            <a href="table.html">
+                                <i class="fas fa-table"></i>Tables</a>
+                        </li>
+                        <li>
+                            <a href="form.html">
+                                <i class="far fa-check-square"></i>Forms</a>
+                        </li>
+                        <li>
+                            <a href="calendar.html">
+                                <i class="fas fa-calendar-alt"></i>Calendar</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="fas fa-map-marker-alt"></i>Maps</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-copy"></i>Pages</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="login.html">Login</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">Register</a>
+                                </li>
+                                <li>
+                                    <a href="forget-pass.html">Forget Password</a>
+                                </li>
+                            </ul>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </nav>
         </header>
+        <div class="sub-header-mobile-2 d-block d-lg-none">
+            <div class="header__tool">
+                <div class="header-button-item has-noti js-item-menu">
+                    <i class="zmdi zmdi-notifications"></i>
+                    <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
+                        <div class="notifi__title">
+                            <p>You have 3 Notifications</p>
+                        </div>
+                        <div class="notifi__item">
+                            <div class="bg-c1 img-cir img-40">
+                                <i class="zmdi zmdi-email-open"></i>
+                            </div>
+                            <div class="content">
+                                <p>You got a email notification</p>
+                                <span class="date">April 12, 2018 06:50</span>
+                            </div>
+                        </div>
+                        <div class="notifi__item">
+                            <div class="bg-c2 img-cir img-40">
+                                <i class="zmdi zmdi-account-box"></i>
+                            </div>
+                            <div class="content">
+                                <p>Your account has been blocked</p>
+                                <span class="date">April 12, 2018 06:50</span>
+                            </div>
+                        </div>
+                        <div class="notifi__item">
+                            <div class="bg-c3 img-cir img-40">
+                                <i class="zmdi zmdi-file-text"></i>
+                            </div>
+                            <div class="content">
+                                <p>You got a new file</p>
+                                <span class="date">April 12, 2018 06:50</span>
+                            </div>
+                        </div>
+                        <div class="notifi__footer">
+                            <a href="#">All notifications</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-button-item js-item-menu">
+                    <i class="zmdi zmdi-settings"></i>
+                    <div class="setting-dropdown js-dropdown">
+                        <div class="account-dropdown__body">
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-account"></i>Account</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-settings"></i>Setting</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-money-box"></i>Billing</a>
+                            </div>
+                        </div>
+                        <div class="account-dropdown__body">
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-globe"></i>Language</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-pin"></i>Location</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-email"></i>Email</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-notifications"></i>Notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account-wrap">
+                    <div class="account-item account-item--style2 clearfix js-item-menu">
+                        <div class="image">
+                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                        </div>
+                        <div class="content">
+                            <a class="js-acc-btn" href="#">john doe</a>
+                        </div>
+                        <div class="account-dropdown js-dropdown">
+                            <div class="info clearfix">
+                                <div class="image">
+                                    <a href="#">
+                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <h5 class="name">
+                                        <a href="#">john doe</a>
+                                    </h5>
+                                    <span class="email">johndoe@example.com</span>
+                                </div>
+                            </div>
+                            <div class="account-dropdown__body">
+                                <div class="account-dropdown__item">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                </div>
+                                <div class="account-dropdown__item">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-settings"></i>Setting</a>
+                                </div>
+                                <div class="account-dropdown__item">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                </div>
+                            </div>
+                            <div class="account-dropdown__footer">
+                                <a href="{{route('logout')}}">
+                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- END HEADER MOBILE -->
 
         <!-- PAGE CONTENT-->
@@ -301,7 +480,7 @@
                                     <span class="au-breadcrumb-span">You are here:</span>
                                     <ul class="list-unstyled list-inline au-breadcrumb__list">
                                         <li class="list-inline-item active">
-                                            <a href="#">Inventory</a>
+                                            <a href="categories">Categories</a>
                                         </li>
                                         <li class="list-inline-item seprate">
                                             <span>/</span>
@@ -325,11 +504,11 @@
                 <div class="container">
                     {{-- <div class="row"> --}}
                         {{-- <div class="col-md-30"> --}}
-                            <h3 class="title-5 m-b-35">data table</h3>
+                            <h3 class="title-5 m-b-35">Product Categories</h3>
                            
-                                    <a href="{{route('products.create')}}">
+                                    <a href="{{ route('categories.create') }}">
                                     <button class="au-btn au-btn-icon au-btn--green au-btn--small" style="margin-left: 1100px">
-                                        <i class="zmdi zmdi-plus"></i>add item</button>
+                                        <i class="zmdi zmdi-plus"></i>Add Category</button>
                                     
                             <div class="table-responsive table-responsive-data2" style="padding-right: 20px">
                                 <div>
@@ -340,37 +519,27 @@
                                 @endif
                                 </div>
                                 <table class="table table-data2" style="width: 500%">
-                                    <thead>
+                                    <thead >
                                         <tr>
                                             <th>Name</th>
-                                            <th>Storage</th>
-                                            <th>Category</th>
-                                            <th>Unit Cost</th>
-                                            <th>Quantity</th>
-                                            <th>reorder Level</th>
-                                            <th>status</th>
+                                            {{-- <th >Actions</th> --}}
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tbody id="Content">
                                         <tr class="tr-shadow" style="width: 500%">
-                                            @foreach($products as $product)
+                                            @foreach($categories as $category)
 
                                             
-                                            <td>{{$product->name}}</td>
-                                            <td>{{$product->storage}}GB</td>
-                                            <td>{{$product->category->category_name}}</td>
-                                            <td>{{$product->cost}}</td>
-                                            <td>{{$product->quantity}}</td>
-                                            <td>{{$product->reorder_Level}}</td>
+                                            <td>{{ $category->category_name }}</td>
                                             <td>
                                                 <div class="table-data-feature">
-                                                    <a href="{{route('products.edit' , ['product' => $product])}}">
+                                                    <a href="{{ route('categories.edit', $category) }}">
                                                     <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                                         <i class="zmdi zmdi-edit"></i>
                                                     </button>
                                                     </a>
-                                                    <form method="post" action="{{route('products.delete' , ['product' => $product])}}">
+                                                    <form method="post" action="{{ route('categories.destroy', $category) }}">
                                                         @csrf
                                                         @method('delete')
                                                         <button class="item" data-toggle="tooltip" data-placement="top" title="Delete" type="submit" value="Delete">
