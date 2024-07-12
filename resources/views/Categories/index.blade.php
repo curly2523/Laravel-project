@@ -93,6 +93,9 @@
                                     <li>
                                         <a href="forget-pass.html">Forget Password</a>
                                     </li>
+                                    <li>
+                                        <a href="inventory">Inventory</a>
+                                    </li>
                                 </ul>
                             </li>
                             {{-- <li class="has-sub">
